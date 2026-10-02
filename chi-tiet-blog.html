@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tối ưu hóa giao diện CSS Grid — Blog Trần Quốc Thịnh</title>
+  <meta name="description" content="Bài viết chi tiết về cách tối ưu layout bằng CSS Grid.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,500;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="index.html" class="mark">Quốc Thịnh<span>.dev</span></a>
+      <nav class="site-nav" aria-label="Điều hướng chính">
+        <a href="index.html">Trang chủ</a>
+        <a href="gioi-thieu.html">Về tôi</a>
+        <a href="du-an.html">Dự án</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <section class="hero" style="padding-bottom: 2rem;">
+        <div class="wrap" style="grid-template-columns: 1fr;">
+          <div>
+            <p class="role-line"><a href="blog.html" style="text-decoration:none;">← Quay lại Blog</a></p>
+            <h1 style="max-width: 25em;">Hành trình tối ưu hóa giao diện với CSS Grid</h1>
+            <p class="index" style="color: var(--ink-soft);">Đăng ngày 12 Tháng 10, 2026 • 5 phút đọc</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0;">
+        <div class="wrap">
+          <!-- Hình ảnh lấy từ nguồn bên ngoài & Ghi nguồn -->
+          <div class="plate" style="margin-bottom: 2rem; padding: 1rem;">
+            <span class="tick-tr"></span><span class="tick-bl"></span>
+            <img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&q=80&w=1000" alt="Màn hình code minh họa" style="width:100%; height:auto;">
+            <p class="credit" style="text-align: right; margin-top: 0.5rem; color: var(--ink-soft);">
+              <i>Nguồn ảnh: <a href="https://unsplash.com/photos/black-flat-screen-computer-monitor-hTv8aaPziOQ" target="_blank">Unsplash (Christopher Gower)</a></i>
+            </p>
+          </div>
+
+          <div style="max-width: 42em; margin: 0 auto;">
+            <h2>Tại sao lại là CSS Grid?</h2>
+            <p>Trước đây, mình luôn dùng Flexbox cho mọi thứ. Tuy nhiên, khi bắt tay vào làm trang Portfolio này, mình nhận ra việc căn chỉnh các thành phần theo cấu trúc 2 chiều (cả hàng và cột) bằng Flexbox khá cồng kềnh. Đó là lúc mình tìm đến Grid.</p>
+            
+            <h2 style="margin-top: 2rem;">Những lợi ích rõ rệt</h2>
+            <ul>
+              <li><strong>Kiểm soát layout 2 chiều:</strong> Dễ dàng định hình khung giao diện tổng thể.</li>
+              <li><strong>Giảm thiểu thẻ div thừa:</strong> Không cần bọc (wrap) các element quá nhiều lớp.</li>
+              <li><strong>Responsive mượt mà:</strong> Chỉ cần cấu hình lại <code>grid-template-columns</code> trong Media Queries là giao diện đã tự động khớp với Mobile hay Tablet.</li>
+            </ul>
+
+            <h2 style="margin-top: 2rem;">Tài liệu tham khảo</h2>
+            <p>Để nắm vững kỹ thuật này, mình đã học hỏi rất nhiều từ các tài liệu trên mạng. Nguồn tham khảo chính:</p>
+            <ul>
+              <li><i>Tài liệu: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout" target="_blank">MDN Web Docs - CSS Grid Layout</a>.</i></li>
+              <li><i>Công cụ: CSS Grid Generator để trực quan hóa layout.</i></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Trần Quốc Thịnh. Được xây dựng bằng HTML5 &amp; CSS3.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
